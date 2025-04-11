@@ -1,0 +1,33 @@
+{
+  "name": "nodejs-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node src/scripts/generateProducts.js",
+    "getProductsByMinPrice": "node src/scripts/getProductsByMinPrice.js",
+    "getTotalPrice": "node src/scripts/getTotalPrice.js",
+    "modifyProducts": "node src/scripts/modifyProducts.js",
+    "getProductsCategories": "node src/scripts/getProductsCategories.js",
+    "categoriesProductsArray": "node src/scripts/categoriesProductsArray.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koliesnikova-Kat/nodejs-practice.git"
+  },
+  "keywords": [],
+  "author": "Kateryna Koliesnikova <koliesnikova.kateryna@gmail.com>",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Koliesnikova-Kat/nodejs-practice/issues"
+  },
+  "homepage": "https://github.com/Koliesnikova-Kat/nodejs-practice#readme",
+  "dependencies": {
+    "faker": "^5.5.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.6.0"
+  }
+}
