@@ -7,6 +7,7 @@ const categoriesProductsArray = async () => {
 
   const categoryMap = productList.reduce((acc, product) => {
     const { category, name } = product;
+    
     if (!acc[category]) {
       acc[category] = [];
     }
