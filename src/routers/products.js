@@ -7,17 +7,20 @@ import {
   getProductsController,
   patchProductController,
 } from '../controllers/products.js';
+import { authenticate } from '../middlewares/authenticate.js';
 
 const router = Router();
 
-router.get('/products', ctrlWrapper(getProductsController));
+router.use(authenticate);
 
-router.get('/products/:productId', ctrlWrapper(getProductByIdController));
+router.get('/', ctrlWrapper(getProductsController));
 
-router.post('/products', ctrlWrapper(createProductController));
+router.get('/:productId', ctrlWrapper(getProductByIdController));
 
-router.patch('/products/:productId', ctrlWrapper(patchProductController));
+router.post('/', ctrlWrapper(createProductController));
 
-router.delete('/products/:productId', ctrlWrapper(deleteProductController));
+router.patch('/:productId', ctrlWrapper(patchProductController));
+
+router.delete('/:productId', ctrlWrapper(deleteProductController));
 
 export default router;
